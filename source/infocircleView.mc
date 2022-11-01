@@ -41,8 +41,20 @@ class infocircleView extends WatchUi.WatchFace {
 
         // Update the view
         var view = View.findDrawableById("TimeLabel") as Text;
-        view.setColor(getApp().getProperty("ForegroundColor") as Number);
+        //view.setColor(getApp().getProperty("ForegroundColor") as Number);
         view.setText(timeString);
+
+        var info1 = View.findDrawableById("Info1") as Text;
+        info1.setText("info 1");
+
+        var info2 = View.findDrawableById("Info2") as Text;
+        info2.setText("info 2");
+
+        var info3 = View.findDrawableById("Info3") as Text;
+        info3.setText("info 3");
+
+        var info4 = View.findDrawableById("Info4") as Text;
+        info4.setText("info 4");
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
