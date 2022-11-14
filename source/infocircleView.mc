@@ -5,6 +5,7 @@ import Toybox.System;
 import Toybox.WatchUi;
 
 class infocircleView extends WatchUi.WatchFace {
+    var fontTime;
 
     function initialize() {
         WatchFace.initialize();
@@ -13,6 +14,8 @@ class infocircleView extends WatchUi.WatchFace {
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.WatchFace(dc));
+        //fontTime = WatchUi.loadResource( Rez.Fonts.future_earth );
+
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -23,27 +26,22 @@ class infocircleView extends WatchUi.WatchFace {
 
     // Update the view
     function onUpdate(dc as Dc) as Void {
-        // Get the current time and format it correctly
-        var timeFormat = "$1$:$2$";
-        var clockTime = System.getClockTime();
-        var hours = clockTime.hour;
-        if (!System.getDeviceSettings().is24Hour) {
-            if (hours > 12) {
-                hours = hours - 12;
-            }
-        } else {
-            if (getApp().getProperty("UseMilitaryFormat")) {
-                timeFormat = "$1$$2$";
-                hours = hours.format("%02d");
-            }
-        }
-        var timeString = Lang.format(timeFormat, [hours, clockTime.min.format("%02d")]);
 
         // Update the view
-        var view = View.findDrawableById("TimeLabel") as Text;
-        //view.setColor(getApp().getProperty("ForegroundColor") as Number);
-        view.setText(timeString);
+        var timeLabel = View.findDrawableById("TimeLabel") as TextArea;
+        var timeLabelInfo = new infoObject("TimeLabel");
+        timeLabel.setText(timeLabelInfo.getText());
 
+        var centerUpper = View.findDrawableById("CenterUpper") as Text;
+        var centerUpperInfo = new infoObject("CenterUpper");
+        centerUpper.setText(centerUpperInfo.getText());
+
+        var centerLower = View.findDrawableById("CenterLower") as Text;
+        var centerLowerInfo = new infoObject("CenterLower");
+        centerLower.setText(centerLowerInfo.getText());
+
+
+        /*
         var info1 = View.findDrawableById("Info1") as Text;
         info1.setText("info 1");
 
@@ -54,7 +52,7 @@ class infocircleView extends WatchUi.WatchFace {
         info3.setText("info 3");
 
         var info4 = View.findDrawableById("Info4") as Text;
-        info4.setText("info 4");
+        info4.setText("info 4"); */
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);

@@ -1,8 +1,10 @@
 <layout id="WatchFace">
     <drawable class="Background" />
-    <label id="TimeLabel" x="center" y="center" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Info1" x="center" y="top" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Info2" x="right" y="center" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Info3" x="center" y="bottom" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
-    <label id="Info4" x="left" y="center" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_WHITE" />
+    <label id="TimeLabel"   x="center"  y="center"  justification="Graphics.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_NUMBER_HOT"/>
+    <label id="CenterUpper" x="center"  y="20%"     justification="Graphics.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_XTINY" />
+    <label id="CenterLower" x="center"  y="70%"     justification="Graphics.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_XTINY"/>
+    <label id="Info1"       x="center"  y="top"     justification="Graphics.TEXT_JUSTIFY_CENTER" />
+    <label id="Info2"       x="right"   y="center"  justification="Graphics.TEXT_JUSTIFY_CENTER" />
+    <label id="Info3"       x="center"  y="bottom"  justification="Graphics.TEXT_JUSTIFY_CENTER" />
+    <label id="Info4"       x="left"    y="center"  justification="Graphics.TEXT_JUSTIFY_CENTER" />
 </layout>

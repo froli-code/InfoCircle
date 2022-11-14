@@ -2,6 +2,11 @@
 
     <property id="BackgroundColor" type="number">0x000000</property>
     <property id="ForegroundColor" type="number">0xFF0000</property>
-    <property id="UseMilitaryFormat" type="boolean">false</property>
+    <property id="UseMilitaryFormat" type="boolean">true</property>
+    <property id="AlternateTimezone" type="number">+1</property>
+
+    <property id="ContentTimeLabel" type="string">time</property>
+    <property id="ContentCenterLower" type="string">time_alternative_zone</property>
+    <property id="ContentCenterUpper" type="string">date</property>
 
 </properties>
